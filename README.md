@@ -35,7 +35,7 @@ The entire setup process is fully unattended and optimized for both workstation 
 | **TheRock/ROCm**          | 7.15 / ROCm 10.0.0                                                |
 | **PyTorch**       | torch 2.15.0.dev20260907+rocm10.0, torchvision 0.30.0.dev20260908+rocm10.0       |       |
 
-**⚠️ Note**: **Ubuntu 20.04.x (Focal Fossa)** and **Ubuntu 22.04.x (Jammy )** is **not supported**. The last compatible ROCm version for 20.04 is **6.4.0**.
+**⚠️ Note**: **Ubuntu 20.04.x (Focal Fossa)** and **Ubuntu 22.04.x (Jammy Jellyfish)** is **not supported**. The last compatible ROCm version for 20.04 is **6.4.0** and **7.4.2** for 22.04 .
 
 ---
 

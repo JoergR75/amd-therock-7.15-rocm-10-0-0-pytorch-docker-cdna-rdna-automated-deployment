@@ -92,7 +92,7 @@ After the successful installation, press "y" to reboot the system and activate a
 
 <img width="2184" height="723" alt="image" src="https://github.com/user-attachments/assets/3560a525-812f-47c3-b861-1f6e4a6c45f6" />
 
-## 🧪 Testing ROCm + PyTorch
+## 🧪 Testing TheRock/ROCm + PyTorch version and GPU HW setup
 
 After rebooting, verify your setup:
 
@@ -216,7 +216,7 @@ Use the container image you need.
 
 **RDNA4** architecture running on Ubuntu 24.04
 ```bash
-docker pull rocm/vllm:rocm7.14.0_rdna_ubuntu24.04_py3.14_pytorch_2.11.0_vllm_0.23.0
+docker pull rocm/vllm-dev:nightly_rocm10_20260903
 ```
 
 <img width="2164" height="905" alt="image" src="https://github.com/user-attachments/assets/98c68113-56e1-4978-9aba-6af23c67609d" />

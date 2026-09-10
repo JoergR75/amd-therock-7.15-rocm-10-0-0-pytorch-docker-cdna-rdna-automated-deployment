@@ -163,7 +163,7 @@ TransferBench supports the following features:
 ### How to install?
 1️⃣ Install prerequisites
 ```bash
-sudo apt install amdrocm-core-sdk10.0
+sudo apt install -y amdrocm-core-sdk10.0
 sudo apt install -y rdma-core libibverbs-dev ibverbs-utils
 sudo apt install -y openmpi-bin libopenmpi-dev
 sudo apt-get install -y mpich libmpich-dev

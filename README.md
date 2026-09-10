@@ -129,7 +129,7 @@ Expected Output Example:
 
 | Ubuntu 26.04 LTS | Ubuntu 24.04.4 LTS |
 |--------|--------|
-| ![](https://github.com/user-attachments/assets/d7731106-ea40-4f93-9509-680c684973b8) | ![](https://github.com/user-attachments/assets/82f7bc98-6693-4f4f-8009-4e46a8b85e7b) |
+| ![]() | ![](https://github.com/user-attachments/assets/82f7bc98-6693-4f4f-8009-4e46a8b85e7b) |
 
 
 With `amd-smi`, you can verify all available GPUs (in this case, 2x Radeon AI PRO R9700 GPUs).

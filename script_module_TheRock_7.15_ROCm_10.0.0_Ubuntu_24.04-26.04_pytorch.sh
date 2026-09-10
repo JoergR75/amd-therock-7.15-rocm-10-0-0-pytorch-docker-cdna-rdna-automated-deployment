@@ -28,7 +28,7 @@ exec > >(tee -a "$LOGFILE") 2>&1
 # ---------------------------------------------------------------------------------------------------------------
 # ROCm Platform:         ROCm 10.0.0 / TheRock 7.15
 # ROCm Release Notes:    https://rocm.docs.amd.com/en/docs-10.0.0/about/release-notes.html
-# amdgpu-dkms:           31.50.0
+# amdgpu:                31.50.0
 #
 # PyTorch:               2.15.0.dev20260907+rocm10.0
 # Transformers:          5.16.1

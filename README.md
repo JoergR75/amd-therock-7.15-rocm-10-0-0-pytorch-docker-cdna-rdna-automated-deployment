@@ -242,7 +242,7 @@ sudo docker run -it \
     --security-opt seccomp=unconfined \
     --group-add video \
     --entrypoint /bin/bash \
-    rocm/vllm:rocm7.14.0_rdna_ubuntu24.04_py3.14_pytorch_2.11.0_vllm_0.23.0
+    rocm/vllm-dev:nightly_rocm10_20260903
 ```
 
 <img width="2068" height="284" alt="image" src="https://github.com/user-attachments/assets/b84604af-ef10-4b4e-98a2-55c661ff8a99" />
@@ -268,7 +268,7 @@ sudo docker run -it \
     --security-opt seccomp=unconfined \
     --group-add video \
     --entrypoint /bin/bash \
-    rocm/vllm:rocm7.14.0_rdna_ubuntu24.04_py3.14_pytorch_2.11.0_vllm_0.23.0
+    rocm/vllm-dev:nightly_rocm10_20260903
 ```
 GPU2 has been added to the container
 

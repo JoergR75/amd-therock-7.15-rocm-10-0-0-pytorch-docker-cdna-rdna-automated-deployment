@@ -58,7 +58,7 @@ function print () {
 }
 
 clear &&
-printf '\n🚀 AMD ROCm 10.0.0 + PyTorch 2.15 (Nightly@ROCm10.0) + Transformers + Docker Setup\nCompatible with Ubuntu 24.04.x and 26.04.x (Desktop & Server)\n ⚠️ Ubuntu 20.04.x and 22.04.x is no longer supported'
+printf '\n🚀 AMD TheRock 7.15 / ROCm 10.0.0 + PyTorch 2.15 (Nightly@ROCm10.0) + Transformers + Docker Setup\nCompatible with Ubuntu 24.04.x and 26.04.x (Desktop & Server)\n ⚠️ Ubuntu 20.04.x and 22.04.x is no longer supported'
 print '\n 🔄 Ubuntu OS Update ...\n'
 
 sudo apt-get update
@@ -578,7 +578,7 @@ else
 fi
 
 # Final installation message
-print ' ✅ Finished ROCm 10.0.0/TheRock 7.15 + PyTorch 2.15 (Nightly@ROCm10.0) + Transformers & Docker environment installation and setup.\n'
+print ' ✅ Finished ROCm 10.0.0 / TheRock 7.15 + PyTorch 2.15 (Nightly@ROCm10.0) + Transformers & Docker environment installation and setup.\n'
 
 # Post-reboot testing instructions
 printf "\n 🔹 After the reboot, test your installation with:\n"

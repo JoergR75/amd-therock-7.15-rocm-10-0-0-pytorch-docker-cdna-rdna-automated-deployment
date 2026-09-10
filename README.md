@@ -3,7 +3,7 @@
 [![ROCm](https://img.shields.io/badge/ROCm-10.0.0-ff6b6b?logo=amd)](https://rocm.docs.amd.com/en/docs-10.0.0/about/release-notes.html)
 [![PyTorch](https://img.shields.io/badge/PyTorch-2.15%20%28Stable%29-ee4c2c?logo=pytorch)](https://pytorch.org/get-started/locally/)
 [![Docker](https://img.shields.io/badge/Docker-29.8.x-blue?logo=docker)](https://www.docker.com/)
-[![Ubuntu](https://img.shields.io/badge/Ubuntu-22.04%20%7C%2024.04%20%7C%2026.04-e95420?logo=ubuntu)](https://ubuntu.com/download/server)
+[![Ubuntu](https://img.shields.io/badge/Ubuntu-24.04%20%7C%2026.04-e95420?logo=ubuntu)](https://ubuntu.com/download/server)
 [![AMD Radeon AI PRO R9700](https://img.shields.io/badge/AMD-RDNA4%20Radeon(TM)%20AI%20PRO%20R9700-8B0000?logo=amd)](https://www.amd.com/en/products/graphics/workstations/radeon-ai-pro/ai-9000-series/amd-radeon-ai-pro-r9700.html)
 [![AMD Ryzen AI](https://img.shields.io/badge/AMD-Ryzen%20AI%20-8B0000?logo=amd)](https://ryzen-ai.com/en/)
 [![AMD CDNA MI300 Series](https://img.shields.io/badge/AMD-CDNA%20Instint(TM)%20Architecture-8B0000?logo=amd)](https://www.amd.com/en/technologies/cdna.html)

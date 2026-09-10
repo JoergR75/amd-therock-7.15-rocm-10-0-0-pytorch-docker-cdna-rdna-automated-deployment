@@ -211,7 +211,7 @@ Check Docker installation and version
 docker -v
 ```
 
-<img width="2018" height="101" alt="image" src="https://github.com/user-attachments/assets/cca4209b-8543-4787-88c9-bef6b1e94db5" />
+<img width="1701" height="102" alt="image" src="https://github.com/user-attachments/assets/920f2246-f5ec-4867-a7ad-3d0084c22aba" />
 
 ### 🤖 vLLM Docker Images
 
@@ -224,7 +224,7 @@ Use the container image you need.
 docker pull rocm/vllm-dev:nightly_rocm10_20260903
 ```
 
-<img width="2164" height="905" alt="image" src="https://github.com/user-attachments/assets/98c68113-56e1-4978-9aba-6af23c67609d" />
+<img width="1991" height="1093" alt="image" src="https://github.com/user-attachments/assets/e08c9a76-3b11-4c69-938d-ee7bd92656b0" />
 
 Further vLLM Docker versions for RDNA4 can be verified on Docker Hub:  
 https://hub.docker.com/r/rocm/vllm-dev/tags?name=navi or https://hub.docker.com/r/vllm/vllm-openai-rocm/tags

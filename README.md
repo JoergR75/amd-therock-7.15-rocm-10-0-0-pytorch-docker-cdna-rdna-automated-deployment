@@ -52,7 +52,7 @@ The entire setup process is fully unattended and optimized for both workstation 
 ## 🚀 Installation
 
 ### 1️⃣ **System preperation**
-Install **Ubuntu 22.04.5 LTS**, **Ubuntu 24.04.4 LTS** or **Ubuntu 26.04 LTS** (Server or Desktop version).
+Install **Ubuntu 24.04.4 LTS** or **Ubuntu 26.04 LTS** (Server or Desktop version).
 
 **⚠️ Note**: This Guide uses Ubuntu **24.04 LTS**
 
@@ -68,28 +68,7 @@ Install **Ubuntu 22.04.5 LTS**, **Ubuntu 24.04.4 LTS** or **Ubuntu 26.04 LTS** (
 
 - SBIOS settings:
   - When using Linux, you should disable Secure Boot
-  - On WRX80 and WRX90 motherboard solutions, make sure SR-IOV is enabled — there are known issues with Ubuntu Linux detecting the network otherwise
-
-- Ubuntu 22.04.5:
-  
-  During the **server** installation, it may be required to add `nomodeset` to the GRUB boot parameters to prevent boot hangs.
-
-  In the GRUB menu (for example, at **"Try or Install Ubuntu Server"**):
-  - Highlight the installation entry
-  - Press **`e`** to edit the boot parameters
-  - Locate the line beginning with:
-
-     ```bash
-     linux /casper/vmlinuz
-     ```
-
-  - Add `nomodeset` before the final `---`:
-
-     ```bash
-     linux /casper/vmlinuz nomodeset ---
-     ```
-
-  - Press **Ctrl + X** or **F10** to boot with the updated parameters
+  - On WRX80 and WRX90 motherboard solutions, make sure SR-IOV is enabled — there are known issues with Ubuntu Linux detecting the network
 
 ### 2️⃣ **Download the Script from the Repository**
 ```bash

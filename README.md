@@ -92,27 +92,34 @@ After the successful installation, press "y" to reboot the system and activate a
 
 <img width="2199" height="636" alt="image" src="https://github.com/user-attachments/assets/0eed9638-8a5e-486c-a04d-1deaa07094f5" />
 
-## 🧪 Testing TheRock/ROCm + PyTorch version and GPU HW setup
+## 🧪 Testing TheRock/ROCm + PyTorch Version and GPU Hardware Setup
 
-After rebooting, verify your setup:
+After rebooting the system, run the diagnostic script to verify that the ROCm software stack, PyTorch installation, and AMD GPU hardware are correctly detected and functioning.
 
-This script creates a simple diagnostic python file (test.py) to verify that PyTorch with ROCm support is correctly installed and working.
+The script creates and runs a simple Python diagnostic file, `test.py`, to confirm that PyTorch with ROCm support is installed correctly and that GPU compute is working end-to-end.
 
-What it does:
+### What the script verifies
 
-- ✅ Validates the operating system, kernel version, CPU, and installed system memory.
-- ✅ Verifies the installed AI software stack, including PyTorch, ROCm, and Transformers versions.
-- ✅ Confirms that the ROCm runtime is correctly installed and accessible (torch.cuda.is_available()).
-- ✅ Automatically detects all installed AMD GPUs and reports key hardware information:
+- ✅ Detects the operating system version and Linux kernel version.
+- ✅ Reports the installed CPU model and total system memory.
+- ✅ Verifies the installed AI software stack, including:
+  - PyTorch version
+  - TheRock/HIP runtime version
+  - ROCm version
+  - AMDGPU driver version
+  - Transformers version
+  - AMD SMI tool and library versions
+- ✅ Confirms that ROCm is available to PyTorch using `torch.cuda.is_available()`.
+- ✅ Automatically detects all installed AMD GPUs and reports key hardware details:
   - GPU model
-  - Available and total VRAM
+  - Free and total VRAM
   - PCIe device address
   - PCIe link width
   - PCIe link speed
-- ✅ Verifies that each GPU is operating at the expected PCIe bandwidth (e.g., PCIe Gen5 x16).
-- ✅ Performs a PyTorch tensor computation on every detected GPU to validate end-to-end GPU functionality.
-- ✅ Confirms successful GPU initialization, memory allocation, and compute execution for each device.
-- ✅ Provides a quick system health check to ensure the workstation is ready for AI inference and training workloads.
+- ✅ Verifies that each GPU is operating at the expected PCIe bandwidth, for example PCIe Gen5 x16.
+- ✅ Performs a PyTorch tensor operation on every detected GPU.
+- ✅ Confirms successful GPU initialization, memory allocation, and compute execution for each GPU.
+- ✅ Provides a quick system health check to confirm that the workstation is ready for AI inference and training workloads.
 
 Example usage:
 ```bash

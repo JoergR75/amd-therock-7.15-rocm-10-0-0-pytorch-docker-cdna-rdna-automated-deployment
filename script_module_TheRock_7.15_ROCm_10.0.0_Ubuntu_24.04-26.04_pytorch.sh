@@ -166,7 +166,7 @@ install_noble() {
     print '\n 📦 Installing ROCm 10.0.0 complete Core SDK including runtimes, compilers, development tools, and dependencies...\n'
 
     # Installing complete Core SDK including runtimes, compilers, development tools, and dependencies
-    sudo amdgpu-install --usecase=rocm,graphics --gfxversion=all --accept-eula -y
+    sudo amdgpu-install --usecase=rocm,graphics --gfxversion=all -y
 
     # Add ROCm binaries to PATH
     info "Configuring shell environment..."

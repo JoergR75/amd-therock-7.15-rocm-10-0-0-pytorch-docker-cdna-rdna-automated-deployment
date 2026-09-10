@@ -32,7 +32,7 @@ The entire setup process is fully unattended and optimized for both workstation 
 | **Kernels** tested       | 6.8.0-139 (24.04.4) • 7.0.0-28 (26.04)                      |
 | **GPUs**          | AMD **RDNA4** • **RDNA3** • **CDNA4** • **CDNA3** • **CDNA2** • **CDNA1**           |
 | **APUs**        | AMD Ryzen™ AI 300 and 400 series                                    |
-| **TheRock/ROCm**          | 7.15 / ROCm 10.0.0                                                |
+| **TheRock/ROCm**          | 7.15 / 10.0.0                                                |
 | **PyTorch**       | torch 2.15.0.dev20260907+rocm10.0, torchvision 0.30.0.dev20260908+rocm10.0       |       |
 
 **⚠️ Note**: **Ubuntu 20.04.x (Focal Fossa)** and **Ubuntu 22.04.x (Jammy Jellyfish)** is **not supported**. The last compatible ROCm version for 20.04 is **6.4.0** and **7.4.2** for 22.04.

@@ -244,7 +244,7 @@ sudo docker run -it \
 
 With `amd-smi`, you can verify all available GPUs (in this case, 2× Radeon AI PRO R9700 GPUs).
 
-<img width="1820" height="746" alt="image" src="https://github.com/user-attachments/assets/55d848f0-9e23-41b9-84d0-5540725e7f73" />
+<img width="1736" height="686" alt="image" src="https://github.com/user-attachments/assets/2877e65f-57f8-4374-a3c7-56854590959e" />
 
 If you need to add a specific GPU, you can use the **passthrough** option.  
 First, verify the available GPUs in the `/dev/dri` directory (host).

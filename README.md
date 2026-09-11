@@ -221,18 +221,13 @@ Use the container image you need.
 
 **RDNA4** architecture running on Ubuntu 24.04
 ```bash
-docker pull rocm/vllm-dev:nightly_rocm10_20260903
+docker pull vllm/vllm-openai-rocm
 ```
 
-<img width="1744" height="1149" alt="image" src="https://github.com/user-attachments/assets/88d7c34d-e363-4be4-9741-9556ffe09752" />
+<img width="1676" height="1213" alt="image" src="https://github.com/user-attachments/assets/1134ecd5-5d0c-4eaa-9d6e-c598128ab085" />
 
-Further vLLM Docker versions for RDNA4 can be verified on Docker Hub:  
-https://hub.docker.com/r/rocm/vllm-dev/tags?name=navi or https://hub.docker.com/r/vllm/vllm-openai-rocm/tags
-
-or for **CDNA** architecture
-```bash
-sudo docker pull rocm/vllm:latest
-```
+Further vLLM Docker versions can be verified on Docker Hub:  
+https://hub.docker.com/r/vllm/vllm-openai-rocm/tags
 
 Run vLLM with all available AMD GPU access (example for RDNA4 on Ubuntu 24.04)
 ```bash
@@ -242,7 +237,7 @@ sudo docker run -it \
     --security-opt seccomp=unconfined \
     --group-add video \
     --entrypoint /bin/bash \
-    rocm/vllm-dev:nightly_rocm10_20260903
+    vllm/vllm-openai-rocm
 ```
 
 <img width="2018" height="253" alt="image" src="https://github.com/user-attachments/assets/a78991a7-9142-4e0a-8d39-9a27be52f515" />
@@ -268,7 +263,7 @@ sudo docker run -it \
     --security-opt seccomp=unconfined \
     --group-add video \
     --entrypoint /bin/bash \
-    rocm/vllm-dev:nightly_rocm10_20260903
+    vllm/vllm-openai-rocm
 ```
 GPU2 has been added to the container
 

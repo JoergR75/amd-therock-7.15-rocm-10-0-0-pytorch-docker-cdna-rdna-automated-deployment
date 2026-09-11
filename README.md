@@ -224,7 +224,7 @@ Use the container image you need.
 docker pull rocm/vllm-dev:nightly_rocm10_20260903
 ```
 
-<img width="1991" height="1093" alt="image" src="https://github.com/user-attachments/assets/e08c9a76-3b11-4c69-938d-ee7bd92656b0" />
+<img width="2018" height="253" alt="image" src="https://github.com/user-attachments/assets/f9f5d08f-b4ec-4eb5-9b18-cb2fc3e11dbf" />
 
 Further vLLM Docker versions for RDNA4 can be verified on Docker Hub:  
 https://hub.docker.com/r/rocm/vllm-dev/tags?name=navi or https://hub.docker.com/r/vllm/vllm-openai-rocm/tags

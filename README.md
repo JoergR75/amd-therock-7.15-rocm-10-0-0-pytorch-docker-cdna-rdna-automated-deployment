@@ -224,7 +224,7 @@ Use the container image you need.
 docker pull rocm/vllm-dev:nightly_rocm10_20260903
 ```
 
-<img width="2018" height="253" alt="image" src="https://github.com/user-attachments/assets/f9f5d08f-b4ec-4eb5-9b18-cb2fc3e11dbf" />
+<img width="1744" height="1149" alt="image" src="https://github.com/user-attachments/assets/88d7c34d-e363-4be4-9741-9556ffe09752" />
 
 Further vLLM Docker versions for RDNA4 can be verified on Docker Hub:  
 https://hub.docker.com/r/rocm/vllm-dev/tags?name=navi or https://hub.docker.com/r/vllm/vllm-openai-rocm/tags
@@ -245,11 +245,11 @@ sudo docker run -it \
     rocm/vllm-dev:nightly_rocm10_20260903
 ```
 
-<img width="2068" height="284" alt="image" src="https://github.com/user-attachments/assets/b84604af-ef10-4b4e-98a2-55c661ff8a99" />
+<img width="2018" height="253" alt="image" src="https://github.com/user-attachments/assets/a78991a7-9142-4e0a-8d39-9a27be52f515" />
 
 With `amd-smi`, you can verify all available GPUs (in this case, 2× Radeon AI PRO R9700 GPUs).
 
-<img width="2143" height="747" alt="image" src="https://github.com/user-attachments/assets/c36e81a2-db8a-41e0-8a63-8d3031ad7d19" />
+<img width="1820" height="746" alt="image" src="https://github.com/user-attachments/assets/55d848f0-9e23-41b9-84d0-5540725e7f73" />
 
 If you need to add a specific GPU, you can use the **passthrough** option.  
 First, verify the available GPUs in the `/dev/dri` directory (host).

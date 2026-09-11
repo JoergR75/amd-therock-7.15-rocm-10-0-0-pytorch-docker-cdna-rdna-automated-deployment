@@ -14,11 +14,11 @@ exec > >(tee -a "$LOGFILE") 2>&1
 # REQUIREMENTS:
 # ---------------------------------------------------------------------------------------------------------------
 # Operating System (OS):
-#   - Ubuntu 24.04.4 LTS (Noble Numbat)
+#   - Ubuntu 24.04.5 LTS (Noble Numbat)
 #   - Ubuntu 26.04.x LTS (Resolute Raccoon)
 #
 # Kernel Versions Tested:
-#   - Ubuntu 24.04.4: 6.8.0-139
+#   - Ubuntu 24.04.5: 6.8.0-139
 #   - Ubuntu 26.04.x: 7.0.0-28
 #
 # Supported Hardware:
@@ -204,7 +204,7 @@ install_noble() {
 
 install_resolute() {
 
-    print '\nUbuntu 26.04.x (resolute raccoon) ROCm 10.0.0 stack installation method has been set.\n'
+    print '\nUbuntu 26.04 (resolute raccoon) ROCm 10.0.0 stack installation method has been set.\n'
     print '\n ✔️ Checking if ROCm/TheRock is installed ...\n'
 
     if dpkg -l | grep -q rocm; then
@@ -282,7 +282,7 @@ install_resolute() {
     print '\n 📦 Installing ROCm 10.0.0 / TheRock 7.15 complete Core SDK including runtimes, compilers, development tools, and dependencies...\n'
 
     # Installing complete Core SDK including runtimes, compilers, development tools, and dependencies
-    sudo amdgpu-install --usecase=rocm,graphics --gfxversion=all --accept-eula -y
+    sudo amdgpu-install --usecase=rocm,graphics --gfxversion=all -y
 
     # Add ROCm binaries to PATH
     info "Configuring shell environment..."
@@ -307,12 +307,7 @@ install_resolute() {
         wheel \
         setuptools \
         --break-system-packages
-    python3 -m pip install \
-        --index-url https://repo.amd.com/rocm/whl-multi-arch/ \
-        "torch[device-all]==2.12.0+rocm7.14.0" \
-        "torchvision[device-all]==0.27.0+rocm7.14.0" \
-        "torchaudio==2.11.0+rocm7.14.0" \
-        --break-system-packages
+    python3 -m pip install --pre torch torchvision --index-url https://download.pytorch.org/whl/nightly/rocm10.0 --break-system-packages
     python3 -m pip install --upgrade \
         accelerate \
         datasets \

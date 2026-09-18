@@ -290,7 +290,26 @@ install_resolute() {
     print '\n 📦 Installing ROCm 10.0.0 / TheRock 7.15 complete Core SDK including runtimes, compilers, development tools, and dependencies...\n'
 
     # Installing complete Core SDK including runtimes, compilers, development tools, and dependencies
-    sudo amdgpu-install --usecase=rocm,graphics --gfxversion=all -y
+    sudo amdgpu-install --usecase=graphics --gfxversion=all
+
+    # Download and install GPG key
+    sudo mkdir --parents --mode=0755 /etc/apt/keyrings
+    wget https://stable.repo.amd.com/rocm/gpg/packages.gpg -O - | \
+        gpg --dearmor | sudo tee /etc/apt/keyrings/amdrocm.gpg > /dev/null
+
+    sudo tee /etc/apt/sources.list.d/amdrocm-stable.sources << EOF
+    X-Repo-Id: amdrocm-stable
+    Types: deb
+    URIs: https://stable.repo.amd.com/rocm/core/packages/ubuntu2604/
+    Suites: stable
+    Components: main
+    Architectures: amd64
+    Signed-By: /etc/apt/keyrings/amdrocm.gpg
+    Enabled: yes
+    EOF
+
+    sudo apt update
+    sudo apt install amdrocm-core-sdk10.0
     
     # Add ROCm binaries to PATH
     info "Configuring shell environment..."

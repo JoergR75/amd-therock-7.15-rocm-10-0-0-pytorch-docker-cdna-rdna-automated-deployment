@@ -286,7 +286,7 @@ install_resolute() {
     wget https://repo.radeon.com/amdgpu-install/31.50/ubuntu/resolute/amdgpu-install_31.50.315000-1_all.deb
     sudo apt install ./amdgpu-install_31.50.315000-1_all.deb -y
     sudo apt update
-    
+
     print '\n 📦 Installing ROCm 10.0.0 / TheRock 7.15 complete Core SDK including runtimes, compilers, development tools, and dependencies...\n'
 
     # Installing complete Core SDK including runtimes, compilers, development tools, and dependencies
@@ -306,11 +306,11 @@ install_resolute() {
     Architectures: amd64
     Signed-By: /etc/apt/keyrings/amdrocm.gpg
     Enabled: yes
-    EOF
+EOF
 
     sudo apt update
     sudo apt install amdrocm-core-sdk10.0
-    
+
     # Add ROCm binaries to PATH
     info "Configuring shell environment..."
 

@@ -213,8 +213,16 @@ install_resolute() {
         echo "Removing ROCm packages..."
         sudo apt purge -y amdrocm7.13 amdrocm7.14 || true
         sudo apt purge -y $(dpkg -l | awk '/rocm|hip|hsa|amd-comgr|llvm-amdgpu|the-rock/ {print $2}') || true
+        sudo amdgpu-uninstall -y
         sudo apt autoremove -y amdgpu-dkms
-        sudo apt purge amdgpu-install
+        
+        sudo apt purge amdgpu-install -y
+        sudo apt autoremove -y
+
+        # Clear the cache and clean the system
+        sudo rm -rf /var/cache/apt/*
+        sudo apt clean all
+        sudo apt update
 
         sudo apt autoremove -y
         sudo apt autoclean
@@ -276,14 +284,14 @@ install_resolute() {
     # Install AMD GPU Driver (amdgpu) 31.50.0
     sudo apt update
     wget https://repo.radeon.com/amdgpu-install/31.50/ubuntu/resolute/amdgpu-install_31.50.315000-1_all.deb
-    sudo DEBIAN_FRONTEND=noninteractive apt install -y ./amdgpu-install_31.50.315000-1_all.deb
+    sudo apt install ./amdgpu-install_31.50.315000-1_all.deb -y
     sudo apt update
-
+    
     print '\n 📦 Installing ROCm 10.0.0 / TheRock 7.15 complete Core SDK including runtimes, compilers, development tools, and dependencies...\n'
 
     # Installing complete Core SDK including runtimes, compilers, development tools, and dependencies
     sudo amdgpu-install --usecase=rocm,graphics --gfxversion=all -y
-
+    
     # Add ROCm binaries to PATH
     info "Configuring shell environment..."
 

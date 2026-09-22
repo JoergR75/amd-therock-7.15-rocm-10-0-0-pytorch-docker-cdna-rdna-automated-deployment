@@ -289,9 +289,6 @@ install_resolute() {
 
     print '\n 📦 Installing ROCm 10.0.0 / TheRock 7.15 complete Core SDK including runtimes, compilers, development tools, and dependencies...\n'
 
-    # Installing complete Core SDK including runtimes, compilers, development tools, and dependencies
-    sudo amdgpu-install --usecase=graphics --gfxversion=gfx1201
-
     # Download and install GPG key
     sudo mkdir --parents --mode=0755 /etc/apt/keyrings
     wget https://stable.repo.amd.com/rocm/gpg/packages.gpg -O - | \
@@ -309,7 +306,10 @@ install_resolute() {
 EOF
 
     sudo apt update
-    sudo apt install amdrocm-core-sdk10.0
+    sudo apt install amdrocm-core-sdk10.0 -y
+
+    # Installing complete Core SDK including runtimes, compilers, development tools, and dependencies
+    sudo amdgpu-install --usecase=graphics --gfxversion=gfx1201 --yes
 
     # Add ROCm binaries to PATH
     info "Configuring shell environment..."

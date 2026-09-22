@@ -288,7 +288,7 @@ install_resolute() {
         print '\nNo ROCm/TheRock or AMDGPU installation detected.\n'
 
     fi
-}
+    }
 
     print '\n ✔️ Checking for PyTorch packages installed via pip ...\n'
 

@@ -309,7 +309,7 @@ EOF
     sudo apt install -y amdrocm-core-sdk10.0
 
     # Installing complete Core SDK including runtimes, compilers, development tools, and dependencies
-    sudo amdgpu-install --usecase=graphics --gfxversion=gfx1201 --yes
+    sudo amdgpu-install --usecase=graphics --gfxversion=all --yes
 
     # Add ROCm binaries to PATH
     info "Configuring shell environment..."

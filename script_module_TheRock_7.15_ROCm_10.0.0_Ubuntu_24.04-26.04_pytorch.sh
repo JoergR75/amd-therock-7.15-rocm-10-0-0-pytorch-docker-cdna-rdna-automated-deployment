@@ -290,7 +290,7 @@ install_resolute() {
     print '\n 📦 Installing ROCm 10.0.0 / TheRock 7.15 complete Core SDK including runtimes, compilers, development tools, and dependencies...\n'
 
     # Installing complete Core SDK including runtimes, compilers, development tools, and dependencies
-    sudo amdgpu-install --usecase=graphics --gfxversion=all
+    sudo amdgpu-install --usecase=graphics --gfxversion=gfx1201
 
     # Download and install GPG key
     sudo mkdir --parents --mode=0755 /etc/apt/keyrings

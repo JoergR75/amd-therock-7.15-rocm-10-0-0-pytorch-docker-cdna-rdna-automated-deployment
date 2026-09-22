@@ -306,7 +306,7 @@ install_resolute() {
 EOF
 
     sudo apt update
-    sudo apt install amdrocm-core-sdk10.0 -y
+    sudo apt install -y amdrocm-core-sdk10.0
 
     # Installing complete Core SDK including runtimes, compilers, development tools, and dependencies
     sudo amdgpu-install --usecase=graphics --gfxversion=gfx1201 --yes

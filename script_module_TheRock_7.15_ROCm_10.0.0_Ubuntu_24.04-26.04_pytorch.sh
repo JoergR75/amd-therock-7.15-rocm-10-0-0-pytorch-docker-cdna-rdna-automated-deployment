@@ -204,39 +204,91 @@ install_noble() {
 
 install_resolute() {
 
-    print '\nUbuntu 26.04 (resolute raccoon) ROCm 10.0.0 stack installation method has been set.\n'
-    print '\n ✔️ Checking if ROCm/TheRock is installed ...\n'
+    print '\nUbuntu 26.04 (Resolute Raccoon) ROCm 10.0.0 stack installation method has been set.\n'
+    print '\n✔️ Checking if ROCm/TheRock is installed ...\n'
 
-    if dpkg -l | grep -q rocm; then
-        print '\nROCm/TheRock detected. Removing ROCm/TheRock and associated packages ...\n'
+    if dpkg -l | grep -qiE 'rocm|amdrocm|amdgpu'; then
+
+        print '\nROCm/TheRock or AMDGPU installation detected. Removing existing packages ...\n'
 
         echo "Removing ROCm packages..."
-        sudo apt purge -y amdrocm7.13 amdrocm7.14 || true
-        sudo apt purge -y $(dpkg -l | awk '/rocm|hip|hsa|amd-comgr|llvm-amdgpu|the-rock/ {print $2}') || true
-        sudo amdgpu-uninstall -y
-        sudo apt autoremove -y amdgpu-dkms
-        
-        sudo apt purge amdgpu-install -y
-        sudo apt autoremove -y
 
-        # Clear the cache and clean the system
-        sudo rm -rf /var/cache/apt/*
-        sudo apt clean all
-        sudo apt update
+        # ------------------------------------------------------------
+        # Remove ROCm / TheRock packages
+        # ------------------------------------------------------------
 
-        sudo apt autoremove -y
-        sudo apt autoclean
+        sudo apt purge -y amdrocm7.13 amdrocm7.14 2>/dev/null || true
+
+        ROCM_PACKAGES=$(dpkg-query -W -f='${binary:Package}\n' 2>/dev/null | \
+            grep -Ei 'rocm|hip|hsa|amd-comgr|llvm-amdgpu|the-rock' || true)
+
+        if [ -n "$ROCM_PACKAGES" ]; then
+            sudo apt purge -y $ROCM_PACKAGES || true
+        fi
+
+
+        # ------------------------------------------------------------
+        # Remove AMDGPU installation if uninstall script exists
+        # ------------------------------------------------------------
+
+        if command -v amdgpu-uninstall >/dev/null 2>&1; then
+            echo "Removing AMDGPU installation..."
+            sudo amdgpu-uninstall -y || true
+        fi
+
+
+        # ------------------------------------------------------------
+        # Remove remaining AMDGPU packages
+        # ------------------------------------------------------------
+
+        sudo apt purge -y amdgpu-dkms amdgpu-install 2>/dev/null || true
+
+
+        # ------------------------------------------------------------
+        # Remove unused dependencies
+        # ------------------------------------------------------------
+
+        sudo apt autoremove -y || true
+
+
+        # ------------------------------------------------------------
+        # Clean APT cache
+        # ------------------------------------------------------------
+
+        echo "Cleaning APT cache..."
+
         sudo apt clean
+        sudo apt autoclean
+
+        sudo rm -rf /var/cache/apt/archives/*
+
+
+        # ------------------------------------------------------------
+        # Remove ROCm directories
+        # ------------------------------------------------------------
+
+        echo "Removing ROCm directories..."
 
         sudo rm -rf /opt/rocm*
-        sudo rm -f /etc/apt/sources.list.d/rocm.list
+        sudo rm -rf /etc/apt/sources.list.d/rocm.list
+        sudo rm -f /etc/apt/sources.list.d/amdrocm-stable.sources
+
+
+        # ------------------------------------------------------------
+        # Update package database
+        # ------------------------------------------------------------
 
         sudo apt update
 
-        print '\n ✅ ROCm/TheRock packages removed successfully.'
+
+        print '\n✅ ROCm/TheRock and AMDGPU packages removed successfully.\n'
+
     else
-        print 'No ROCm/TheRock installation detected.'
+
+        print '\nNo ROCm/TheRock or AMDGPU installation detected.\n'
+
     fi
+}
 
     print '\n ✔️ Checking for PyTorch packages installed via pip ...\n'
 

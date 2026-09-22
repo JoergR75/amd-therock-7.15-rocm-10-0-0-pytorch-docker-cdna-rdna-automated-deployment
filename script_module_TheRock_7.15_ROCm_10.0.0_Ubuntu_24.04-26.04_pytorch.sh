@@ -212,10 +212,7 @@ install_resolute() {
         print '\nROCm/TheRock or AMDGPU installation detected. Removing existing packages ...\n'
 
         echo "Removing ROCm packages..."
-
-        # ------------------------------------------------------------
         # Remove ROCm / TheRock packages
-        # ------------------------------------------------------------
 
         sudo apt purge -y amdrocm7.13 amdrocm7.14 2>/dev/null || true
 
@@ -226,35 +223,20 @@ install_resolute() {
             sudo apt purge -y $ROCM_PACKAGES || true
         fi
 
-
-        # ------------------------------------------------------------
         # Remove AMDGPU installation if uninstall script exists
-        # ------------------------------------------------------------
 
         if command -v amdgpu-uninstall >/dev/null 2>&1; then
             echo "Removing AMDGPU installation..."
             sudo amdgpu-uninstall -y || true
         fi
 
-
-        # ------------------------------------------------------------
         # Remove remaining AMDGPU packages
-        # ------------------------------------------------------------
-
         sudo apt purge -y amdgpu-dkms amdgpu-install 2>/dev/null || true
 
-
-        # ------------------------------------------------------------
         # Remove unused dependencies
-        # ------------------------------------------------------------
-
         sudo apt autoremove -y || true
 
-
-        # ------------------------------------------------------------
         # Clean APT cache
-        # ------------------------------------------------------------
-
         echo "Cleaning APT cache..."
 
         sudo apt clean
@@ -262,24 +244,15 @@ install_resolute() {
 
         sudo rm -rf /var/cache/apt/archives/*
 
-
-        # ------------------------------------------------------------
         # Remove ROCm directories
-        # ------------------------------------------------------------
-
         echo "Removing ROCm directories..."
 
         sudo rm -rf /opt/rocm*
         sudo rm -rf /etc/apt/sources.list.d/rocm.list
         sudo rm -f /etc/apt/sources.list.d/amdrocm-stable.sources
 
-
-        # ------------------------------------------------------------
         # Update package database
-        # ------------------------------------------------------------
-
         sudo apt update
-
 
         print '\n✅ ROCm/TheRock and AMDGPU packages removed successfully.\n'
 

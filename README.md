@@ -29,7 +29,7 @@ The entire setup process is fully unattended and optimized for both workstation 
 | **Component**      | **Supported Versions**                                |
 |---------------------|------------------------------------------------------|
 | **OS**            | Ubuntu 24.04.x (Noble Numbat), Ubuntu 26.04 (Resolute Raccoon) |
-| **Kernels** tested       | 6.8.0-139 (24.04.4) • 7.0.0-31 (26.04)                      |
+| **Kernels** tested       | 6.8.0-139 (24.04.5) • 7.0.0-31 (26.04)                      |
 | **GPUs**          | AMD **RDNA4** • **RDNA3** • **CDNA4** • **CDNA3** • **CDNA2** • **CDNA1**           |
 | **APUs**        | AMD Ryzen™ AI 300 and 400 series                                    |
 | **TheRock/ROCm**          | 7.15 / 10.0.0                                                |
@@ -127,7 +127,7 @@ python3 test.py
 ```
 Expected Output Example:
 
-| Ubuntu 26.04 LTS | Ubuntu 24.04.4 LTS |
+| Ubuntu 26.04 LTS | Ubuntu 24.04.5 LTS |
 |--------|--------|
 | ![](https://github.com/user-attachments/assets/50d7c896-4bd3-419f-83fb-b5231f46170a) | ![](https://github.com/user-attachments/assets/82f7bc98-6693-4f4f-8009-4e46a8b85e7b) |
 

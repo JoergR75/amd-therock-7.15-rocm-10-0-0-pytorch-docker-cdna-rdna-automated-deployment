@@ -15,11 +15,11 @@ exec > >(tee -a "$LOGFILE") 2>&1
 # ---------------------------------------------------------------------------------------------------------------
 # Operating System (OS):
 #   - Ubuntu 24.04.5 LTS (Noble Numbat)
-#   - Ubuntu 26.04.x LTS (Resolute Raccoon)
+#   - Ubuntu 26.04.1 LTS (Resolute Raccoon)
 #
 # Kernel Versions Tested:
 #   - Ubuntu 24.04.5: 6.8.0-139
-#   - Ubuntu 26.04.x: 7.0.0-31
+#   - Ubuntu 26.04.1: 7.0.0-34
 #
 # Supported Hardware:
 #   - AMD CDNA1 | CDNA2 | CDNA3 | CDNA4 | RDNA3 | RDNA4 GPU Architectures | Strix and Gorgon APU Architecture

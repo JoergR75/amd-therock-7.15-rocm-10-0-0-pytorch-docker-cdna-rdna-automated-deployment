@@ -1,4 +1,4 @@
-# 🚀 Automated AMD AI Stack: TheRock 7.15 / ROCm 10.0.0, PyTorch Stable, Transformers, Docker & vLLM
+# 🚀 Automated AMD AI Stack: ROCm 10.0.0 / TheRock 7.15, PyTorch Stable, Transformers, Docker & vLLM
 
 [![ROCm](https://img.shields.io/badge/ROCm-10.0.0-ff6b6b?logo=amd)](https://rocm.docs.amd.com/en/docs-10.0.0/about/release-notes.html)
 [![PyTorch](https://img.shields.io/badge/PyTorch-2.15%20%28Stable%29-ee4c2c?logo=pytorch)](https://pytorch.org/get-started/locally/)
@@ -10,7 +10,7 @@
 
 ## 📌 Overview
 
-This repository provides a fully automated, non-interactive deployment environment for AMD GPU software development targeting AI and HPC workloads on Ubuntu **24.04** and **26.04**. The setup is centered on AMD **TheRock 7.15** based on **ROCm 10.0.0** and the latest nightly PyTorch release.
+This repository provides a fully automated, non-interactive deployment environment for AMD GPU software development targeting AI and HPC workloads on Ubuntu **24.04** and **26.04**. The setup is centered on AMD **TheRock 7.15** based on **ROCm 10.0.0** and the latest stable PyTorch release.
 
 At the platform layer, the script installs the AMD GPU kernel driver (`amdgpu`) **version 31.50.0** directly from AMD's official APT repository by automatically configuring the repository signing key and package source before installing the DKMS package. Using DKMS ensures the kernel driver is automatically rebuilt when the Linux kernel is updated, providing reliable compatibility across supported Ubuntu releases. The deployment then installs the **TheRock 7.15** runtime, including HIP support. The environment is designed to support RDNA4 GPUs. The deployment also configures the required system permissions (`video`, `render`, `sudo`) and installs kernel headers necessary for compiling GPU-accelerated native extensions.
 

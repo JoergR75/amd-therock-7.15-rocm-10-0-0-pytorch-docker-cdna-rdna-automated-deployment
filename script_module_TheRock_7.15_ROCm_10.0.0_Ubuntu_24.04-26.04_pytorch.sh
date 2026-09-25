@@ -376,7 +376,8 @@ EOF
         protobuf \
         sentencepiece \
         setuptools_scm \
-        transformers --break-system-packages
+        transformers \
+        --break-system-packages
 }
 
 # Function detecting installed Ubuntu version

@@ -2,11 +2,11 @@
 LOGFILE="$HOME/rocm10_installation.log"
 exec > >(tee -a "$LOGFILE") 2>&1
 # ================================================================================================================
-# ROCm 10.0.0 / TheRock 7.15 + PyTorch 2.15 (Nightly@ROCm10.0) + Transformers + Docker Setup
+# ROCm 10.0.0 / TheRock 7.15 + PyTorch 2.13 (Stable@ROCm10.0) + Transformers + Docker Setup
 # Compatible with Ubuntu 24.04.x and 26.04.x (Desktop & Server) — Ubuntu 20.04.x and 22.04.x is no longer supported
 # ================================================================================================================
 # Description:
-# This script automates the installation of AMD ROCm 10.0.0 / TheRock 7.15 , PyTorch 2.15 (Nightly@ROCm10.0), Transformers,
+# This script automates the installation of AMD ROCm 10.0.0 / TheRock 7.15 , PyTorch 2.13 (Stable@ROCm10.0), Transformers,
 # and Docker on Ubuntu 24.04.x and 26.04.x systems. It automatically fetches the appropriate installation scripts and
 # performs a fully non-interactive setup optimized for both desktop and server environments.
 # ================================================================================================================
@@ -30,7 +30,7 @@ exec > >(tee -a "$LOGFILE") 2>&1
 # ROCm Release Notes:    https://rocm.docs.amd.com/en/docs-10.0.0/about/release-notes.html
 # amdgpu:                31.50.0
 #
-# PyTorch:               2.15.0.dev20260907+rocm10.0
+# PyTorch:               2.13.0.dev20260907+rocm10.0
 # Transformers:          5.16.1
 # Docker:                29.8.0 min. 29.0.0 (the script will verify and skip installation if minimum requirements are installed)
 #
@@ -58,7 +58,7 @@ function print () {
 }
 
 clear &&
-printf '\n🚀 AMD TheRock 7.15 / ROCm 10.0.0 + PyTorch 2.15 (Nightly@ROCm10.0) + Transformers + Docker Setup\nCompatible with Ubuntu 24.04.x and 26.04.x (Desktop & Server)\n ⚠️ Ubuntu 20.04.x and 22.04.x are no longer supported'
+printf '\n🚀 AMD ROCm 10.0.0 / TheRock 7.15 + PyTorch 2.13 (Stable@ROCm10.0) + Transformers + Docker Setup\nCompatible with Ubuntu 24.04.x and 26.04.x (Desktop & Server)\n ⚠️ Ubuntu 20.04.x and 22.04.x are no longer supported'
 print '\n 🔄 Ubuntu OS Update ...\n'
 
 sudo apt-get update
@@ -629,7 +629,7 @@ else
 fi
 
 # Final installation message
-print ' ✅ Finished ROCm 10.0.0 / TheRock 7.15 + PyTorch 2.15 (Nightly@ROCm10.0) + Transformers & Docker environment installation and setup.\n'
+print ' ✅ Finished ROCm 10.0.0 / TheRock 7.15 + PyTorch 2.13 (Stable@ROCm10.0) + Transformers & Docker environment installation and setup.\n'
 
 # Post-reboot testing instructions
 printf "\n 🔹 After the reboot, test your installation with:\n"

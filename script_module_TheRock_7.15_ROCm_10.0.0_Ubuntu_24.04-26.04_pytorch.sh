@@ -186,11 +186,19 @@ install_noble() {
     print '\n 📦 Installing PyTorch 2.15 (Nightly) for ROCm 10.0.0, Transformers environment ...\n'
 
     # Install PyTorch
+    mkdir -p ~/pip-tmp
+    chmod 700 ~/pip-tmp
+
     python3 -m pip install --upgrade \
         pip \
         wheel \
         setuptools --break-system-packages
-    python3 -m pip install --pre torch torchvision --index-url https://download.pytorch.org/whl/nightly/rocm10.0 --break-system-packages
+    TMPDIR=$HOME/pip-tmp \
+    python3 -m pip install --no-cache-dir --index-url https://stable.repo.amd.com/rocm/whl-next/ \
+        "torch[device-all]==2.13.0+rocm10.0.0" \
+        "torchvision[device-all]==0.28.0+rocm10.0.0" \
+        "torchaudio==2.11.0.2+rocm10.0.0" \
+        --break-system-packages
     python3 -m pip install --upgrade \
         accelerate \
         datasets \
@@ -356,7 +364,7 @@ EOF
     # Install PyTorch
     mkdir -p ~/pip-tmp
     chmod 700 ~/pip-tmp
-    
+
     python3 -m pip install --upgrade \
         pip \
         wheel \

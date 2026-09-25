@@ -29,7 +29,7 @@ The entire setup process is fully unattended and optimized for both workstation 
 | **Component**      | **Supported Versions**                                |
 |---------------------|------------------------------------------------------|
 | **OS**            | Ubuntu 24.04.5 (Noble Numbat), Ubuntu 26.04.1 (Resolute Raccoon) |
-| **Kernels** tested       | 6.8.0-139 (24.04.5) • 7.0.0-34 (26.04.1)                      |
+| **Kernels** tested       | 6.8.0-142 (24.04.5) • 7.0.0-34 (26.04.1)                      |
 | **GPUs**          | AMD **RDNA4** • **RDNA3** • **CDNA4** • **CDNA3** • **CDNA2** • **CDNA1**           |
 | **APUs**        | AMD Ryzen™ AI 300 and 400 series                                    |
 | **TheRock/ROCm**          | 7.15 / 10.0.0                                                |

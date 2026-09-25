@@ -133,7 +133,7 @@ Expected Output Example:
 
 With `amd-smi`, you can verify all available GPUs (in this case, 2x Radeon AI PRO R9700 GPUs).
 
-<img width="2058" height="752" alt="image" src="https://github.com/user-attachments/assets/bd96164d-f9c3-49e9-a669-275fd4b0ba88" />
+<img width="2059" height="755" alt="image" src="https://github.com/user-attachments/assets/3ce2ca47-042f-412f-9950-450ed6611e00" />
 
 ⚠️ **Caution:**  
 Make sure **"Re-Size BAR"** is enabled in the **SBIOS**.  

@@ -359,7 +359,7 @@ EOF
         wheel \
         setuptools \
         --break-system-packages
-    python3 -m pip install --index-url https://stable.repo.amd.com/rocm/whl-next/ \
+    python3 -m pip install --no-cache-dir --index-url https://stable.repo.amd.com/rocm/whl-next/ \
         "torch[device-all]==2.13.0+rocm10.0.0" \
         "torchvision[device-all]==0.28.0+rocm10.0.0" \
         "torchaudio==2.11.0.2+rocm10.0.0" \

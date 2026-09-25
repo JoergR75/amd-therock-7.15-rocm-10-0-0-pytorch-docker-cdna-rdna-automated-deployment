@@ -90,7 +90,7 @@ The installation takes ~15 minutes depending on internet speed and hardware perf
 ### 4️⃣ **Reboot the System**
 After the successful installation, press "y" to reboot the system and activate all installed components.
 
-<img width="2199" height="636" alt="image" src="https://github.com/user-attachments/assets/0eed9638-8a5e-486c-a04d-1deaa07094f5" />
+<img width="2249" height="601" alt="image" src="https://github.com/user-attachments/assets/11e9554b-786b-4e01-aa4e-48e8268d15e6" />
 
 ## 🧪 Testing TheRock/ROCm + PyTorch Version and GPU Hardware Setup
 

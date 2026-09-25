@@ -14,7 +14,7 @@ This repository provides a fully automated, non-interactive deployment environme
 
 At the platform layer, the script installs the AMD GPU kernel driver (`amdgpu`) **version 31.50.0** directly from AMD's official APT repository by automatically configuring the repository signing key and package source before installing the DKMS package. Using DKMS ensures the kernel driver is automatically rebuilt when the Linux kernel is updated, providing reliable compatibility across supported Ubuntu releases. The deployment then installs the **TheRock 7.15** runtime, including HIP support. The environment is designed to support RDNA4 GPUs. The deployment also configures the required system permissions (`video`, `render`, `sudo`) and installs kernel headers necessary for compiling GPU-accelerated native extensions.
 
-For the AI framework layer, the script installs PyTorch 2.15 Nightly using ROCm 10.0.0 wheels from the official PyTorch ROCm nightly repository. This enables access to the latest HIP runtime capabilities, compiler optimizations, and kernel fusion features. The environment is complemented with widely used AI and data-processing libraries, including Transformers, Accelerate, Diffusers, Datasets, and SentencePiece, together with the required Python build tooling for immediate development, testing, benchmarking, and profiling of modern LLM, diffusion, and distributed workloads.
+For the AI framework layer, the script installs PyTorch 2.13 Stable using ROCm 10.0.0 wheels from the official PyTorch ROCm nightly repository. This enables access to the latest HIP runtime capabilities, compiler optimizations, and kernel fusion features. The environment is complemented with widely used AI and data-processing libraries, including Transformers, Accelerate, Diffusers, Datasets, and SentencePiece, together with the required Python build tooling for immediate development, testing, benchmarking, and profiling of modern LLM, diffusion, and distributed workloads.
 
 The developer toolchain further includes essential C/C++ build utilities and low-level GPU development packages such as `cmake`, `libstdc++` development headers, `git`, `git-lfs`, `libmsgpack`, and `TransferBench` for PCIe and HBM bandwidth validation. Runtime observability and diagnostics are supported through utilities including `htop`, `ncdu`, `rocminfo`, and `amd-smi`.
 
@@ -28,12 +28,12 @@ The entire setup process is fully unattended and optimized for both workstation 
 
 | **Component**      | **Supported Versions**                                |
 |---------------------|------------------------------------------------------|
-| **OS**            | Ubuntu 24.04.x (Noble Numbat), Ubuntu 26.04 (Resolute Raccoon) |
-| **Kernels** tested       | 6.8.0-139 (24.04.5) • 7.0.0-31 (26.04)                      |
+| **OS**            | Ubuntu 24.04.5 (Noble Numbat), Ubuntu 26.04.1 (Resolute Raccoon) |
+| **Kernels** tested       | 6.8.0-139 (24.04.5) • 7.0.0-34 (26.04.1)                      |
 | **GPUs**          | AMD **RDNA4** • **RDNA3** • **CDNA4** • **CDNA3** • **CDNA2** • **CDNA1**           |
 | **APUs**        | AMD Ryzen™ AI 300 and 400 series                                    |
 | **TheRock/ROCm**          | 7.15 / 10.0.0                                                |
-| **PyTorch**       | torch 2.15.0.dev20260907+rocm10.0, torchvision 0.30.0.dev20260908+rocm10.0       |       |
+| **PyTorch**       | torch 2.13.0+rocm10.0.0, torchvision 0.28.0+rocm10.0.0 torchaudio 2.11.0.2+rocm10.0.0      |       |
 
 **⚠️ Note**: **Ubuntu 20.04.x (Focal Fossa)** and **Ubuntu 22.04.x (Jammy Jellyfish)** is **not supported**. The last compatible ROCm version for 20.04 is **6.4.0** and **7.4.2** for 22.04.
 
@@ -52,9 +52,9 @@ The entire setup process is fully unattended and optimized for both workstation 
 ## 🚀 Installation
 
 ### 1️⃣ **System preperation**
-Install **Ubuntu 24.04.5 LTS** or **Ubuntu 26.04 LTS** (Server or Desktop version).
+Install **Ubuntu 24.04.5 LTS** or **Ubuntu 26.04.1 LTS** (Server or Desktop version).
 
-**⚠️ Note**: This Guide uses Ubuntu **24.04 LTS**
+**⚠️ Note**: This Guide uses Ubuntu **24.04.5 LTS**
 
 **Recommendations:**
 - Use a fresh Ubuntu installation if possible

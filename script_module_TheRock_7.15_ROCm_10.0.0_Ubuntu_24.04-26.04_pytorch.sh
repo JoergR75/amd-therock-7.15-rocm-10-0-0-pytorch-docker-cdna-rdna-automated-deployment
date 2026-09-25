@@ -183,7 +183,7 @@ install_noble() {
     export PATH="/opt/rocm/bin:$HOME/.local/bin:$PATH"
     export LD_LIBRARY_PATH="/opt/rocm/lib:/opt/rocm/lib64:${LD_LIBRARY_PATH:-}"
 
-    print '\n 📦 Installing PyTorch 2.15 (Nightly) for ROCm 10.0.0, Transformers environment ...\n'
+    print '\n 📦 Installing PyTorch 2.13 (Stable) for ROCm 10.0.0, Transformers environment ...\n'
 
     # Install PyTorch
     mkdir -p ~/pip-tmp
@@ -359,7 +359,7 @@ EOF
     export PATH="/opt/rocm/bin:$HOME/.local/bin:$PATH"
     export LD_LIBRARY_PATH="/opt/rocm/lib:/opt/rocm/lib64:${LD_LIBRARY_PATH:-}"
 
-    print '\n 📦 Installing PyTorch 2.15 (Nightly@ROCm10.0) for ROCm 10.0.0, Transformers environment ...\n'
+    print '\n 📦 Installing PyTorch 2.13 (Stable@ROCm10.0) for ROCm 10.0.0, Transformers environment ...\n'
 
     # Install PyTorch
     mkdir -p ~/pip-tmp

@@ -30,9 +30,9 @@ exec > >(tee -a "$LOGFILE") 2>&1
 # ROCm Release Notes:    https://rocm.docs.amd.com/en/docs-10.0.0/about/release-notes.html
 # amdgpu:                31.50.0
 #
-# PyTorch:               2.13.0.dev20260907+rocm10.0
-# Transformers:          5.16.1
-# Docker:                29.8.0 min. 29.0.0 (the script will verify and skip installation if minimum requirements are installed)
+# PyTorch:               2.13.0+rocm10.0.0
+# Transformers:          5.17.0
+# Docker:                29.8.1 min. 29.0.0 (the script will verify and skip installation if minimum requirements are installed)
 #
 # INCLUDED TOOLS:
 # ---------------------------------------------------------------------------------------------------------------

@@ -40,7 +40,7 @@ The entire setup process is fully unattended and optimized for both workstation 
 ---
 
 ## ⚡ Features
-- Automated **TheRock GPU drivers + HIP SDK** installation
+- Automated **ROCm/TheRock GPU + HIP SDK** installation
 - **PyTorch Stable** with GPU acceleration
 - Preinstalled **Transformers**, **Accelerate**, **Diffusers**, and **Datasets**
 - Integrated **Docker environment** with ROCm GPU passthrough

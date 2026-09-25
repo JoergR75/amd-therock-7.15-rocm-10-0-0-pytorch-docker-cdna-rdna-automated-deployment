@@ -127,7 +127,7 @@ python3 test.py
 ```
 Expected Output Example:
 
-| Radeon AI PRO R9700 Ubuntu 26.04 LTS | Radeon AI PRO R9700 Ubuntu 24.04.5 LTS | Ryzen AI 9 HX 470 Ubuntu 26.04 |
+| Radeon AI PRO R9700 Ubuntu 26.04.1 LTS | Radeon AI PRO R9700 Ubuntu 24.04.5 LTS | Ryzen AI 9 HX 470 Ubuntu 26.04.1 |
 |--------|--------|--------|
 | ![](https://github.com/user-attachments/assets/98a98540-a2b2-4727-8e2c-00573b3c27bc) | ![](https://github.com/user-attachments/assets/82f7bc98-6693-4f4f-8009-4e46a8b85e7b) | ![](https://github.com/user-attachments/assets/1eecf13d-3c08-4195-a32d-8691743d9516) |
 
